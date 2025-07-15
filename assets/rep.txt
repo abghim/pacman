@@ -1,0 +1,27 @@
+
+        if len(available_paths(clyde_hkx, clyde_hky, level)) > 2 and in_tile_center(ghost_positions[3][0], ghost_positions[3][1], htl, vtl):
+            clyde_direction = random.choice(available_paths(clyde_hkx, clyde_hky, level))
+        if clyde_direction == 0 and clyde_direction in available_paths(clyde_hkx, clyde_hky, level):
+            ghost_positions[3][0] = ghost_positions[3][0] + speed
+        elif clyde_direction == 0 and level[clyde_hky][clyde_hkx] < 3 and not in_tile_center(ghost_positions[3][0], ghost_positions[3][1], htl, vtl):
+            ghost_positions[3][0] = ghost_positions[3][0] + speed
+        elif clyde_direction == 0:
+            clyde_direction = random.choice(available_paths(clyde_hkx, clyde_hky, level))
+        elif clyde_direction == 3 and clyde_direction in available_paths(clyde_hkx, clyde_hky, level):
+            ghost_positions[3][1] = ghost_positions[3][1] + speed
+        elif clyde_direction == 3 and level[clyde_hky][clyde_hkx] < 3 and not in_tile_center(ghost_positions[3][0], ghost_positions[3][1], htl, vtl):
+            ghost_positions[3][1] = ghost_positions[3][1] + speed
+        elif clyde_direction == 3:
+            clyde_direction = random.choice(available_paths(clyde_hkx, clyde_hky, level))
+        elif clyde_direction == 2 and clyde_direction in available_paths(clyde_hkx, clyde_hky, level):
+            ghost_positions[3][0] = ghost_positions[3][0] - speed
+        elif clyde_direction == 2 and level[clyde_hky][clyde_hkx] < 3 and not in_tile_center(ghost_positions[3][0], ghost_positions[3][1], htl, vtl):
+            ghost_positions[3][0] = ghost_positions[3][0] - speed
+        elif clyde_direction == 2:
+            clyde_direction = random.choice(available_paths(clyde_hkx, clyde_hky, level))
+        elif clyde_direction == 1 and clyde_direction in available_paths(clyde_hkx, clyde_hky, level):
+            ghost_positions[3][1] = ghost_positions[3][1] - speed
+        elif clyde_direction == 1 and level[clyde_hky][clyde_hkx] < 3 and not in_tile_center(ghost_positions[3][0], ghost_positions[3][1], htl, vtl):
+            ghost_positions[3][1] = ghost_positions[3][1] - speed
+        elif clyde_direction == 1:
+            clyde_direction = random.choice(available_paths(clyde_hkx, clyde_hky, level))
