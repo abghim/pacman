@@ -1,4 +1,4 @@
-# Pacman-legacy
+# Pacman
 This is a pacman game clone I wrote as novice python programmer; the source is filled with spaghetti logic. Recently ported for WebAssembly using the the pygbag library.
 
 Link at [https://abghim.github.io/pacman]([url](https://abghim.github.io/pacman))
